@@ -23,6 +23,7 @@ function createDeleteButtonIcon(){
 		var createDiv = document.getElementsByClassName("div");
 		createDeleteButton.classList.add("delete");
 		createDiv[ind].appendChild(createDeleteButton);
+		always();
 	}
 }
 
@@ -30,6 +31,7 @@ function deleteNodeOnClick(e){
 	var del = document.querySelectorAll("i");
 	for(var ind = 0; ind<del.length;ind++){
 		this.parentNode.parentNode.remove();
+		always();
 	}
 }
 
@@ -59,6 +61,8 @@ function createListElement(){
 	createDeleteButton.classList.add("delete");
 	createDiv.appendChild(createDeleteButton);
 	deleteParentNodeOnClick();
+
+	document.getElementsByClassName("aaaa")[0].style.visibility="visible";
 }
 
 
@@ -77,11 +81,14 @@ function addListAfterKeypress(event){
 function deleteParentNodeOnClick(){
 	for(var i=0;i< deleteButton.length;i++){
 		deleteButton[i].addEventListener("click",deleteNodeOnClick);
+		always();
 	}
+	 
 }
 
 function clearList() {
     ul.innerHTML = "";
+	document.getElementsByClassName("aaaa")[0].style.visibility="hidden";
 }
 
 
@@ -95,6 +102,13 @@ function lightMode(){
 	document.querySelector("body").style.backgroundColor="white";
 	document.querySelector("h1").style.color="black";
 	document.querySelector("h2").style.color="black";
+}
+
+function always(){
+
+		if(ul.innerHTML === ""){
+			document.getElementsByClassName("aaaa")[0].style.visibility="hidden";
+		}
 }
 
 darkButton.addEventListener("click",darkMode);

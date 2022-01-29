@@ -20,17 +20,20 @@ header{
 
 .wrapper{
 	max-width: 980px;
+  height: max-content;
 	margin: 0 auto;
 	text-align: center;
 }
 
 section{
-max-width: 100%;
-text-align: left;
-margin: 0 auto;
-padding-left: 25%;
-
-
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+float: center;
+height: fit-content;
 }
 
 
@@ -187,15 +190,14 @@ padding-left: 25%;
 
 
 .background--lightgreen{
-
-	max-width: 50%;
+ align-content: center;
+  width: 65%;
 	background-color: black;
 	border-radius: 25px;
 	box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
 	opacity:.9;
+  align-self:center ;
 	padding-top: 10px;
-
-
 }
 
 ul li{
@@ -213,7 +215,7 @@ ul li{
 li{
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: left;
 }
 
 .div{
@@ -222,7 +224,7 @@ li{
 
 .li-wrapper{
 	display:flex;
-	align-items: center;
+	align-items: left;
 	justify-content: space-between;
 	margin: 5px;
 }
